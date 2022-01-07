@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" maxWidth="250" minWidth="250" prefHeight="630.0" prefWidth="250.0"
+            stylesheets="/css/music_pane.css" xmlns="http://javafx.com/javafx/8.0.171"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.music.controller.LeftController">
+    <children>
+        <ScrollPane fx:id="scrollPane" maxHeight="630.0" minHeight="630.0">
+            <content>
+                <VBox prefWidth="250.0">
+                    <children>
+                        <VBox id="vbox"  prefHeight="550.0" prefWidth="160.0">
+                            <children>
+                                <Label text="My music" textFill="#6b6b6b">
+                                    <VBox.margin>
+                                        <Insets left="10.0" top="10.0"/>
+                                    </VBox.margin>
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </Label>
+                                <ListView fx:id="myMusicListView" prefHeight="550.0" prefWidth="200.0">
+                                    <VBox.margin>
+                                        <Insets top="10.0"/>
+                                    </VBox.margin>
+                                </ListView>
+                            </children>
+                        </VBox>
+                       
+                    </children>
+                </VBox>
+            </content>
+        </ScrollPane>
+    </children>
+</AnchorPane>
