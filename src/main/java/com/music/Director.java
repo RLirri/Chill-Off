@@ -39,6 +39,15 @@ public class Director {
             e.printStackTrace();
         }
     }
+    // load the start screen
+    public void toStart_coffee(){
+        com.coffee.Coffee main=new com.coffee.Coffee();
+        try {
+            main.start(stage);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
     
     // load the client screen
     public void toClient(){

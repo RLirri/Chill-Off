@@ -16,6 +16,8 @@ public class ClientButton {
 
     @FXML
     private AnchorPane lightOff;
+    private Object coffee_machine;
+
     @FXML
     void onGoPlayButtonClick(){ //ActionEvent event
 		System.out.println("onGoPlayButtonClick");
@@ -25,6 +27,17 @@ public class ClientButton {
         performance.toStart();
         
     }
+
+    @FXML
+    void onCoffeeButtonClick(){
+        System.out.println("onCoffeeButtonClick");
+//        Coffee coffee = ((Coffee) this.getClass(coffee_machine));
+        Director test = Director.getInstance();
+        test.toStart_coffee();
+
+    }
+
+    //onMouseClicked='#onCoffeeButtonClick' styleClass="handClass"
 
     @FXML
     public void onLightButtonClick() { //ActionEvent event
