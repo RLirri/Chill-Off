@@ -6,17 +6,6 @@ import javafx.scene.layout.AnchorPane;
 public class LightBulb {
     private static Boolean status = false;
 
-    public void turnLightOn() {
-        status = true;
-        System.out.println("Light on");
-    }
-
-    public void turnLightOff()
-    {
-        status = false;
-        System.out.println("Light off");
-    }
-
     public void turnLightOn(AnchorPane imageView) {
         status = true;
         imageView.setVisible(true);

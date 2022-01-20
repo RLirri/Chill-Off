@@ -13,10 +13,6 @@ public class RemoteControl {
         slot = command;
     }
 
-    public void buttonPressed() {
-        slot.execute();
-    }
-
     public void buttonPressed(AnchorPane imageView) {
         slot.execute(imageView);
     }
