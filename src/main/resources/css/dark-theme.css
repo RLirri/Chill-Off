@@ -1,0 +1,6 @@
+#darktheme {
+    -fx-background-image: url("/image/backgroundLightOff.png");
+    -fx-background-size: 100%, 100%;
+}
+
+

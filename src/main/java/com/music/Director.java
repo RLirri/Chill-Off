@@ -1,5 +1,6 @@
 package com.music;
 
+import com.Client;
 import javafx.stage.Stage;
 /**
  *
@@ -20,6 +21,7 @@ public class Director {
     
     //get the only usable object
     public static Director getInstance(){
+
         return instance;
     }
     
@@ -30,12 +32,12 @@ public class Director {
 
     // load the start screen
     public void toStart(){
-    	MusicScreen main=new MusicScreen();
-		 try {
-			main.start(stage);
-		 } catch (Exception e) {
-			e.printStackTrace();
-		}
+        MusicScreen main=new MusicScreen();
+        try {
+            main.start(stage);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
     
     // load the client screen

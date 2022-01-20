@@ -6,7 +6,7 @@
 <?import javafx.scene.effect.BoxBlur?>
 
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="495.0" prefWidth="746.0"  stylesheets="@../css/style.css"  xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"  fx:controller="com.music.utils.ClientButton" visible="true">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="495.0" prefWidth="746.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ClientButton" visible="true">
     <children>
         <ImageView id="lightBackground" fx:id="lightBackground" fitHeight="529.0" fitWidth="841.0" layoutX="-93.0" layoutY="-28.0" pickOnBounds="true" preserveRatio="true">
             <image>
@@ -18,7 +18,7 @@
                 <Image url="/image/darkmode/desk.png" />
             </image>
         </ImageView>
-        <ImageView id="coffeemachine" fitHeight="70.0" fitWidth="84.0" layoutX="-4.0" layoutY="246.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView id="coffeemachine" styleClass="handClass" fitHeight="70.0" fitWidth="84.0" layoutX="-4.0" layoutY="246.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="/image/darkmode/coffeemachine.png" />
             </image>
@@ -81,7 +81,7 @@
                     <Image url="/image/desk.png" />
                 </image>
             </ImageView>
-            <ImageView id="coffeemachine" fitHeight="70.0" fitWidth="84.0" layoutX="-4.0" layoutY="246.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView id="coffeemachine" styleClass="handClass" fitHeight="70.0" fitWidth="84.0" layoutX="-4.0" layoutY="246.0" pickOnBounds="true" preserveRatio="true">
                 <image>
                     <Image url="/image/coffeemachine.png" />
                 </image>
