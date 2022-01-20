@@ -11,10 +11,6 @@ public class LightOnCommand implements Command{
         this.lightBulb=lightBulb;
     }
 
-    @Override
-    public void execute() {
-        lightBulb.turnLightOn();
-    }
 
     @Override
     public void execute(AnchorPane imageView) {

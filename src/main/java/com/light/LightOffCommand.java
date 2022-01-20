@@ -12,11 +12,6 @@ public class LightOffCommand implements Command{
     }
 
     @Override
-    public void execute() {
-        lightBulb.turnLightOff();
-    }
-
-    @Override
     public void execute(AnchorPane imageView) {
         // Hide light from GUI
         lightBulb.turnLightOff(imageView);
