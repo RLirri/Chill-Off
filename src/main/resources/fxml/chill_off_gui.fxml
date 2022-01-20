@@ -18,7 +18,7 @@
                 <Image url="/image/darkmode/desk.png" />
             </image>
         </ImageView>
-        <ImageView id="coffeemachine" styleClass="handClass" fitHeight="70.0" fitWidth="84.0" layoutX="-4.0" layoutY="246.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView id="coffeemachine" onMouseClicked='#onCoffeeButtonClick' styleClass="handClass" fitHeight="70.0" fitWidth="84.0" layoutX="-4.0" layoutY="246.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="/image/darkmode/coffeemachine.png" />
             </image>
@@ -81,7 +81,7 @@
                     <Image url="/image/desk.png" />
                 </image>
             </ImageView>
-            <ImageView id="coffeemachine" styleClass="handClass" fitHeight="70.0" fitWidth="84.0" layoutX="-4.0" layoutY="246.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView id="coffeemachine" onMouseClicked='#onCoffeeButtonClick' styleClass="handClass" fitHeight="70.0" fitWidth="84.0" layoutX="-4.0" layoutY="246.0" pickOnBounds="true" preserveRatio="true">
                 <image>
                     <Image url="/image/coffeemachine.png" />
                 </image>
