@@ -3,12 +3,12 @@ package com.music.controller;
 import java.io.IOException;
 import java.util.List;
 
-import com.music.Director;
+import com.music.SingletonDirector;
 import com.music.anotation.Autowired;
 import com.music.constant.RotateConstant;
 import com.music.constant.ToggleMusicConstant;
-import com.music.file.FileMp3ServerImpl;
-import com.music.init.Initialize;
+import com.music.file.FactoryFileMp3ServerImpl;
+import com.music.init.FactoryInitialize;
 import com.music.model.MusicInfo;
 
 import javafx.beans.property.SimpleDoubleProperty;
@@ -30,7 +30,7 @@ import javafx.util.Duration;
  *
  * @author Huang Ruixin
  */
-public class PlayController implements Initialize {
+public class FacadePlayController implements FactoryInitialize {
 
     public Button lastOne;
     public Button playButton;
@@ -52,7 +52,7 @@ public class PlayController implements Initialize {
     @Autowired
     private LeftController leftController;
     
-    private FileMp3ServerImpl fileMp3Server=new FileMp3ServerImpl();
+    private FactoryFileMp3ServerImpl fileMp3Server=new FactoryFileMp3ServerImpl();
 
     private MediaPlayer mediaPlayer;
    
@@ -282,7 +282,7 @@ public class PlayController implements Initialize {
             path = String.format("jar:file:%s!%s", fileMp3Server.getJarPath(), path);
             return new Media(path);
         } else {
-            return new Media(FileMp3ServerImpl.class.getResource(path).toExternalForm());
+            return new Media(FactoryFileMp3ServerImpl.class.getResource(path).toExternalForm());
         }
     }
 
@@ -298,7 +298,7 @@ public class PlayController implements Initialize {
      */
     @FXML
     public void toClientClick(ActionEvent event) {
-        Director performance = Director.getInstance();
+        SingletonDirector performance = SingletonDirector.getInstance();
         performance.toClient();
     }
 

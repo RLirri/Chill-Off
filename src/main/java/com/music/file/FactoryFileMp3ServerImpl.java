@@ -2,12 +2,10 @@ package com.music.file;
 
 import java.io.File;
 import java.io.IOException;
-import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.List;
 import java.util.jar.JarEntry;
-import java.util.jar.JarFile;
 
 import com.music.model.MusicInfo;
 /**
@@ -15,7 +13,7 @@ import com.music.model.MusicInfo;
  * @author Huang Ruixin
  */
 
-public class FileMp3ServerImpl implements FileMp3Server {
+public class FactoryFileMp3ServerImpl implements FactoryFileMp3Server {
 
 
     public  List<MusicInfo> getMusicInfoList(String relativePath) throws IOException {
@@ -56,7 +54,7 @@ public class FileMp3ServerImpl implements FileMp3Server {
      * @return
      */
     public  String getJarPath() {
-        return FileMp3ServerImpl.class.getProtectionDomain().getCodeSource().getLocation().getPath();
+        return FactoryFileMp3ServerImpl.class.getProtectionDomain().getCodeSource().getLocation().getPath();
     }
 
     /**

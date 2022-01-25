@@ -5,8 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.music.anotation.Autowired;
-import com.music.file.FileMp3ServerImpl;
-import com.music.init.Initialize;
+import com.music.file.FactoryFileMp3ServerImpl;
+import com.music.init.FactoryInitialize;
 import com.music.model.MusicInfo;
 
 import javafx.event.EventHandler;
@@ -25,7 +25,7 @@ import javafx.util.StringConverter;
  * @author Huang Ruixin
  */
 
-public class MusicListController implements Initialize {
+public class MusicListController implements FactoryInitialize {
 
     public Button playListButton;
     public Button historyButton;
@@ -34,9 +34,9 @@ public class MusicListController implements Initialize {
     public AnchorPane rootPane;
 
     @Autowired
-    private PlayController playController;
+    private FacadePlayController facadePlayController;
     
-    private FileMp3ServerImpl fileMp3Server=new FileMp3ServerImpl();
+    private FactoryFileMp3ServerImpl fileMp3Server=new FactoryFileMp3ServerImpl();
 
     private List<MusicInfo> musicInfoList = new ArrayList<>();
 
@@ -79,7 +79,7 @@ public class MusicListController implements Initialize {
             if(event.getButton() == MouseButton.PRIMARY) {
                 MusicInfo musicInfo = playListView.getSelectionModel().getSelectedItem();
                 if (event.getClickCount() == 2) {
-                    playController.toggleMusic(musicInfo, true);
+                    facadePlayController.toggleMusic(musicInfo, true);
                 }
             }
         };

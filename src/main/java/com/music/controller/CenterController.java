@@ -1,14 +1,12 @@
 package com.music.controller;
 
 import com.music.constant.RotateConstant;
-import com.music.init.Initialize;
+import com.music.init.FactoryInitialize;
 
 import javafx.animation.Interpolator;
 import javafx.animation.RotateTransition;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.SnapshotParameters;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.image.Image;
@@ -24,7 +22,7 @@ import javafx.util.Duration;
  * @author Huang Ruixin
  */
 
-public class CenterController implements Initialize {
+public class CenterController implements FactoryInitialize {
 
     public ImageView coverImageView;
     public Label lyricLabel;

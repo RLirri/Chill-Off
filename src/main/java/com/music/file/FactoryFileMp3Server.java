@@ -14,7 +14,7 @@ import com.music.model.MusicInfo;
  *
  * @author Huang Ruixin
  */
-public interface FileMp3Server {
+public interface FactoryFileMp3Server {
 
 	
 	 public  List<MusicInfo> getMusicInfoList(String relativePath) throws IOException;
@@ -36,7 +36,7 @@ public interface FileMp3Server {
 	     */
 	    default List<MusicInfo> getMusicInfoFromLocal(String relativePath) {
 	        List<MusicInfo> musicList = new ArrayList<>();
-	        File files = new File(FileMp3ServerImpl.class.getResource(relativePath).getPath());
+	        File files = new File(FactoryFileMp3ServerImpl.class.getResource(relativePath).getPath());
 	        for (File file : files.listFiles()) {
 	            String musicName = file.getName();
 	            String musicPath = file.getAbsolutePath();
