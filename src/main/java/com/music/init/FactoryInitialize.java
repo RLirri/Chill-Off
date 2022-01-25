@@ -7,7 +7,7 @@ import java.io.IOException;
  * @author Huang Ruixin
  */
 
-public interface Initialize {
+public interface FactoryInitialize {
 
 	 public void initialize()throws IOException;
 }

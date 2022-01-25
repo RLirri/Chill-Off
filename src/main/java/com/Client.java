@@ -1,6 +1,6 @@
 package com;
 
-import com.music.Director;
+import com.music.SingletonDirector;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -24,7 +24,7 @@ public class Client extends Application {
         primaryStage.setWidth(748);
         primaryStage.setHeight(502);
         primaryStage.setScene(new Scene(root, 748, 502));
-        Director performance = Director.getInstance();
+        SingletonDirector performance = SingletonDirector.getInstance();
         //use the method to initiate the game windows
         performance.init(this,primaryStage);
         primaryStage.show();

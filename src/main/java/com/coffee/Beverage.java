@@ -9,25 +9,24 @@ public abstract class Beverage {
 }
 
 
- class Espresso extends Beverage {
-    public Espresso ( ) {
-        description = "Expresso";
-    }
+// class Espresso extends Beverage {
+//    public Espresso ( ) {
+//        description = "Espresso";
+//    }
+//
+//}
 
+// class Americano extends Beverage {
+//    public Americano ( ) {
+//        description = "Americano";
+//    }
+//
+//}
 
-}
-
- class Americano extends Beverage {
-    public Americano ( ) {
-        description = "Americano";
-    }
-
-}
-
-class Cappuccino extends Beverage {
-    public Cappuccino ( ) {
-        description = "Cappuccino";
-    }
-
-}
+//class Cappuccino extends Beverage {
+//    public Cappuccino ( ) {
+//        description = "Cappuccino";
+//    }
+//
+//}
 

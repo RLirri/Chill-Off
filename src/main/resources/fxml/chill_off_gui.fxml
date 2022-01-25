@@ -3,7 +3,6 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.effect.BoxBlur?>
 
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="495.0" prefWidth="746.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.utils.ClientButton" visible="true">
@@ -33,7 +32,7 @@
                 <Image url="/image/darkmode/light.png" />
             </image>
         </ImageView>
-        <ImageView id="man" fitHeight="203.0" fitWidth="164.0" layoutX="155.0" layoutY="315.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView id="man" onMouseClicked='#onManButtonClick' fitHeight="203.0" fitWidth="164.0" layoutX="155.0" layoutY="315.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="/image/darkmode/worker.png" />
             </image>
@@ -48,7 +47,7 @@
                 <Image url="/image/darkmode/computer.png" />
             </image>
         </ImageView>
-        <ImageView id="woman" fitHeight="215.0" fitWidth="101.0" layoutX="546.0" layoutY="258.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView id="woman" onMouseClicked='#onWomenButtonClick' fitHeight="215.0" fitWidth="101.0" layoutX="546.0" layoutY="258.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="/image/darkmode/transferFile.png" />
             </image>
@@ -96,7 +95,7 @@
                     <Image url="/image/light.png" />
                 </image>
             </ImageView>
-            <ImageView id="man" fitHeight="203.0" fitWidth="164.0" layoutX="155.0" layoutY="315.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView id="man" onMouseClicked='#onManButtonClick' fitHeight="203.0" fitWidth="164.0" layoutX="155.0" layoutY="315.0" pickOnBounds="true" preserveRatio="true">
                 <image>
                     <Image url="/image/worker.png" />
                 </image>
@@ -111,7 +110,7 @@
                     <Image url="/image/computer.png" />
                 </image>
             </ImageView>
-            <ImageView id="woman" fitHeight="215.0" fitWidth="101.0" layoutX="546.0" layoutY="258.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView id="woman" onMouseClicked='#onWomenButtonClick' fitHeight="215.0" fitWidth="101.0" layoutX="546.0" layoutY="258.0" pickOnBounds="true" preserveRatio="true">
                 <image>
                     <Image url="/image/transferFile.png" />
                 </image>

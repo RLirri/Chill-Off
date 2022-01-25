@@ -16,8 +16,7 @@ import com.music.anotation.Autowired;
 import com.music.controller.CenterController;
 import com.music.controller.LeftController;
 import com.music.controller.MusicListController;
-import com.music.controller.PlayController;
-import com.music.file.FileMp3ServerImpl;
+import com.music.controller.FacadePlayController;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -37,7 +36,7 @@ public class MusicScreen extends Application {
 
     private static final String scanPackage = "com.music.controller";
 
-    private PlayController playController;
+    private FacadePlayController facadePlayController;
 
     public static void main(String[] args) {
         launch(args);
@@ -69,7 +68,7 @@ public class MusicScreen extends Application {
         //primaryStage.getIcons().add(new Image("/image/icon.png"));
         primaryStage.show();
 
-        playController.slider.prefWidthProperty().bind(primaryStage.widthProperty().subtract(1040 - 411));
+        facadePlayController.slider.prefWidthProperty().bind(primaryStage.widthProperty().subtract(1040 - 411));
     }
 
     private AnchorPane initMusicListController() throws IOException {
@@ -92,9 +91,9 @@ public class MusicScreen extends Application {
     private AnchorPane initPlayerController() throws IOException {
         FXMLLoader playLoader = new FXMLLoader(getClass().getResource("/fxml/play_pane.fxml"));
         AnchorPane playerPane = playLoader.load();
-        playController = playLoader.getController();
+        facadePlayController = playLoader.getController();
 
-        saveInstance(playController);
+        saveInstance(facadePlayController);
 
         playerPane.setMaxHeight(66);
         playerPane.setMinHeight(70);

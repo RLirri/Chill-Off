@@ -7,21 +7,20 @@ import javafx.stage.Stage;
  * @author Huang Ruixin
  */
 
-public class Director {
+public class SingletonDirector {
 	 //construct an object for the singleton
-    private static Director instance = new Director();
+    private static SingletonDirector instance = new SingletonDirector();
     
     private Stage stage;
     
     private Client client;
     //the constructor of this class
-    private Director(){
+    private SingletonDirector(){
 
     }
     
     //get the only usable object
-    public static Director getInstance(){
-
+    public static SingletonDirector getInstance(){
         return instance;
     }
     
@@ -39,7 +38,7 @@ public class Director {
             e.printStackTrace();
         }
     }
-    // load the start screen
+
     public void toStart_coffee(){
         com.coffee.Coffee main=new com.coffee.Coffee();
         try {
@@ -48,7 +47,7 @@ public class Director {
             e.printStackTrace();
         }
     }
-    
+
     // load the client screen
     public void toClient(){
     	try {
@@ -57,7 +56,16 @@ public class Director {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-    	
+    }
+
+    public void toClient_coffee(String Output){
+        try {
+            client.start(stage);
+            System.out.println("You coffee in Client_page is : " +Output);
+        } catch (Exception e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
     }
 
 }
